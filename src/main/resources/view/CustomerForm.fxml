@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="599.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <ImageView fitHeight="463.0" fitWidth="691.0" layoutX="24.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/img4.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur radius="15.0" />
+         </effect>
+      </ImageView>
+      <TextField fx:id="txtId" layoutX="24.0" layoutY="75.0" opacity="0.9" prefHeight="34.0" prefWidth="132.0" />
+      <TextField fx:id="txtName" layoutX="180.0" layoutY="75.0" opacity="0.9" prefHeight="34.0" prefWidth="166.0" />
+      <TextField fx:id="txtAddress" layoutX="368.0" layoutY="75.0" opacity="0.9" prefHeight="34.0" prefWidth="166.0" />
+      <TextField fx:id="txtSalary" layoutX="557.0" layoutY="75.0" opacity="0.9" prefHeight="34.0" prefWidth="158.0" />
+      <Label layoutX="32.0" layoutY="36.0" prefHeight="26.0" prefWidth="104.0" text="Customer ID">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="32.0" prefHeight="26.0" prefWidth="132.0" text="Customer Name">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="376.0" layoutY="36.0" prefHeight="26.0" prefWidth="145.0" text="Customer Address">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="564.0" layoutY="32.0" prefHeight="26.0" prefWidth="139.0" text="Customer Salary">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomer" layoutX="44.0" layoutY="175.0" opacity="0.8" prefHeight="347.0" prefWidth="660.0" stylesheets="@../Asset/StyleSheet.css">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="89.66665649414062" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="137.33334350585938" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="171.6666259765625" text="Address" />
+            <TableColumn fx:id="colSalary" prefWidth="145.0" text="Salary" />
+            <TableColumn fx:id="colOption" prefWidth="113.33331298828125" text="Option" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="504.0" layoutY="130.0" onAction="#updateButtonOnAction" prefHeight="28.0" prefWidth="94.0" style="-fx-background-color: #fff176;" text="Update">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="618.0" layoutY="130.0" onAction="#saveButtonOnAction" prefHeight="28.0" prefWidth="86.0" style="-fx-background-color: #81c784;" text="Save">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="598.0" layoutY="545.0" onAction="#reloadButtonOnAction" prefHeight="34.0" prefWidth="104.0" style="-fx-background-color: #64b5f6;" text="Reload">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="1.0" layoutY="8.0" onAction="#backButtonOnAction" prefHeight="20.0" prefWidth="37.0">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
